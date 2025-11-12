@@ -39,12 +39,6 @@ table th {
     color: #fff;
 }
 
-.success {
-    color: green;
-    text-align: center;
-    font-weight: bold;
-}
-
 .error {
     color: red;
     text-align: center;
