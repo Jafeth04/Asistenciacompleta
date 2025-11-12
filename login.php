@@ -3,7 +3,7 @@ session_start();
 
 // Conexión a la base de datos (PDO)
 $host = 'localhost';
-$db = 'pruba2';
+$db = 'asistencia_db';
 $user = 'root';
 $pass = 'rg4casador';
 

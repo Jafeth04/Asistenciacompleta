@@ -1,0 +1,162 @@
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+/* Enlaces */
+a {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: #007bff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+form select,
+form input[type="date"],
+form button {
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Tabla de resultados */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #e9ecef;
+}
+
+/* Botones de exportar */
+button#btnPDF,
+button#btnExcel {
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+button#btnPDF {
+    background-color: #dc3545;
+}
+
+button#btnPDF:hover {
+    background-color: #c82333;
+}
+
+button#btnExcel {
+    background-color: #28a745;
+}
+
+button#btnExcel:hover {
+    background-color: #218838;
+}
+
+/* Mensajes */
+p {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+/* Responsive: hacer que la tabla sea scrollable en móviles */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        font-weight: bold;
+        text-align: left;
+    }
+}
