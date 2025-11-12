@@ -39,11 +39,11 @@ $asistencia_data = $asistencia_hoy->fetchAll(PDO::FETCH_ASSOC);
     <header>
         <nav>
             <ul>
-                <li><a href="Admin_pantallaprincipal.php">Inicio</a></li>
-                <li><a href="Admin_estudiantes.php">Estudiantes</a></li>
-                <li><a href="Admin_docentes.php">Docentes</a></li>
-                <li><a href="Admin_grupos.php">Grupos</a></li>
-                <li><a href="Admin_asistencia.php">Asistencia</a></li>
+                <!-- <li><a href="#">Inicio</a></li> -->
+                <li><a href="Admin_usuarios_aulas.php">Administrar usuarios y aulas</a></li>
+                <li><a href="Asignar_Docente.php">Asignar docente a aulas</a></li>
+                <li><a href="Crud_estudiante.php">Gestion de estudiantes</a></li>
+                <!-- <li><a href="Admin_asistencia.php">Asistencia</a></li> -->
             </ul>
         </nav>
     </header>
