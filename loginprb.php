@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Redirección según rol
             switch ($user['rol']) {
                 case 'admin':
-                    header("Location: admin_dashboard.php");
+                    header("Location: Admin_pantallaprincipal.php");
                     break;
                 case 'docente':
                     header("Location: tomar_asistencia.php");
