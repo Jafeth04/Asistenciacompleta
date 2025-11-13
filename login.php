@@ -3,7 +3,7 @@ session_start();
 
 // Conexión a la base de datos (PDO)
 $host = 'localhost';
-$db = 'pruba2';
+$db = 'asistencia_db';
 $user = 'root';
 $pass = 'rg4casador';
 
@@ -21,11 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $contrasena = trim($_POST['contrasena']);
 
     if (!empty($usuario) && !empty($contrasena)) {
+        // Consulta el usuario
         $stmt = $pdo->prepare("SELECT id, usuario, contrasena, rol FROM usuarios WHERE usuario = ?");
         $stmt->execute([$usuario]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if ($user && password_verify($contrasena, $user['contrasena'])) {
+        // Compara texto plano (solo para pruebas)
+        if ($user && $contrasena === $user['contrasena']) {
             $_SESSION['usuario_id'] = $user['id'];
             $_SESSION['rol'] = $user['rol'];
 
@@ -35,10 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     header("Location: admin_dashboard.php");
                     break;
                 case 'docente':
-                    header("Location: docente_dashboard.php");
+                    header("Location: tomar_asistencia.php");
                     break;
                 case 'padre':
-                    header("Location: padre_dashboard.php");
+                    header("Location: ConsultaHijo.php");
                     break;
                 default:
                     header("Location: index.php");
