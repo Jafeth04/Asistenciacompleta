@@ -37,10 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     header("Location: Admin_pantallaprincipal.php");
                     break;
                 case 'docente':
-                    header("Location: tomar_asistencia.php");
+                    header("Location: Reporte.php");
                     break;
                 case 'padre':
-                    header("Location: padre_dashboard.php");
+                    header("Location: ConsultaHijo.php");
                     break;
                 default:
                     header("Location: index.php");

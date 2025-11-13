@@ -2,10 +2,10 @@
 session_start();
 
 // // --- Validar rol docente ---
-// if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'docente') {
-//      header("Location: login.php");
-//      exit;
-// }   
+if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'docente') {
+      header("Location: loginprb.php");
+     exit;
+ }   
 
 // --- Conexión a la base de datos ---
 $host = 'localhost';
