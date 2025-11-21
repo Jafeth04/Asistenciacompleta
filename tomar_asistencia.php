@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['asistencia'])) {
 <body>
 <div class="container">
     <h1>Tomar Asistencia</h1>
-    logout.phpCerrar Sesión</a>
+
 
     <?php if (!empty($mensaje)): ?>
         <p class="success"><?= htmlspecialchars($mensaje) ?></p>

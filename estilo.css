@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background:url("fondo.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.portal-container {
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 50px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.portal-container h1 {
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+.portal-container p {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.portal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.button {
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: 0.3s;
+    color: white;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* Colores según usuario */
+.alumno { background-color: #3498db; }
+.padre { background-color: #e67e22; }
+.docente { background-color: #2ecc71; }
+.admin { background-color: #9b59b6; }
