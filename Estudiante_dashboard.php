@@ -2,10 +2,10 @@
 session_start();
 
 // Validar que el estudiante esté logueado
-// if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'estudiante') {
-//     header("Location: login.php");
-//     exit;
-// }
+if (!isset($_SESSION['rol']) || $_SESSION['rol'] !== 'estudiante') {
+    header("Location: login.php");
+    exit;
+}
 
 $estudiante_id = $_SESSION['usuario_id']; // o $_SESSION['estudiante_id']
 
